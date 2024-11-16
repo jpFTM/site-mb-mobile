@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lais💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            font-size: 18px; /* Tamanho padrão do texto */
+        }
+        nav {
+            background-color: #ff69b4;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Flexível para mobile */
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            background-color: #ff1493;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff85c0;
+        }
+        nav ul li a.active {
+            background-color: white;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+        }
+        .content h1 {
+            font-size: 28px; /* Tamanho do título ajustado */
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 16px; /* Tamanho do parágrafo ajustado */
+            color: #ff69b4;
+            margin: 10px 0; /* Espaçamento entre parágrafos */
+        }
+        .content img {
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto;
+            display: block;
+        }
+        .content a {
+            font-size: 18px;
+            color: #bf4ed6;
+            text-decoration: none;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .content a:hover {
+            color: #e27ffb;
+        }
+        .heart {
+            color: #ff1493;
+            font-size: 60px; /* Tamanho do coração ajustado */
+            animation: beat 1s infinite;
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #ff69b4;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            position: fixed; /* Torna o rodapé fixo */
+            bottom: 0; /* Posiciona na parte inferior */
+            width: 100%; /* Garante que ocupe toda a largura da tela */
+            z-index: 100; /* Certifica-se de que o rodapé ficará sobre outros elementos */
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul li a {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+            .content h1 {
+                font-size: 24px;
+            }
+            .heart {
+                font-size: 50px;
+            }
+            .content a {
+                font-size: 16px;
+            }
+        }
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column; /* Empilha os itens no mobile */
+            }
+            .content h1 {
+                font-size: 20px;
+            }
+            .heart {
+                font-size: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pagina2.html">Princesa</a></li>
+            <li><a href="pagina3.html">A Melhor Playlist</a></li>
+            <li><a href="pagina4.html" class="active">Nossos Planos</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Página em construção</h1> 
+        <img src="constru.png" alt="Página em construção">
+        <p>Essa página ainda está como nosso relacionamento e como o nosso futuro. Em construção.</p>
+        <p>Futuramente essa página será dedicada exclusivamente para colocarmos fotos nossas, eu irei criar um álbum na estilisação de pagina para a gente</p>
+        <p>Mas venho pensando em algumas funcionalidades a mais para esse site que posso implementar futuramente, ainda não, mas irá ter...</p>
+        <p>Venho pensando em um tipo diferente de date enquanto estiver aqui no Brasil, não irei mais pagar uma viagem para a gente, mas pensei em algo melhor no qual possamos fazer.</p>
+        <p>Veremos se daria certo ou não, mas vale dizer, será em Uberlândia mesmo, não se preocupe.</p>
+        <p class="heart">❤</p>
+    </div>
+
+    <footer>
+        Feito por João Pedro 💕
+    </footer>
+
+</body>
+</html>

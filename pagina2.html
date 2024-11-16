@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lais💖</title>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: #ffe4e1;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #ff69b4;
+            padding: 10px;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap; /* Flexível para mobile */
+        }
+        nav ul li {
+            margin: 5px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 8px 15px;
+            background-color: #ff1493;
+            border-radius: 10px;
+            transition: background-color 0.3s;
+        }
+        nav ul li a:hover {
+            background-color: #ff85c0;
+        }
+        nav ul li a.active {
+            background-color: white;
+            color: #ff69b4;
+            font-weight: bold;
+        }
+        .content {
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 50px; /* Espaço extra para evitar sobreposição do footer */
+        }
+        .content h1 {
+            font-size: 32px;
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 16px;
+            color: #ff69b4;
+            margin: 10px 0;
+        }
+        .heart {
+            color: #ff1493;
+            font-size: 80px;
+            animation: beat 1s infinite;
+        }
+        #difficulty-selection {
+            margin-top: 20px;
+        }
+        #difficulty {
+            font-size: 16px;
+            padding: 5px;
+            border: 2px solid #ff1493;
+            border-radius: 5px;
+        }
+        #image-display {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #difficulty-image {
+            width: 100%;
+            max-width: 300px; /* Limita a largura máxima */
+            height: auto; /* Mantém proporção */
+            display: none; /* Oculta inicialmente */
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #ff69b4;
+            text-align: center;
+            padding: 10px;
+            color: white;
+            position: fixed; /* Torna o rodapé fixo */
+            bottom: 0; /* Posiciona na parte inferior */
+            width: 100%; /* Garante que ocupe toda a largura da tela */
+            z-index: 100; /* Certifica-se de que o rodapé ficará sobre outros elementos */
+        }
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+        }
+        /* Responsividade */
+        @media (max-width: 768px) {
+            nav ul li a {
+                font-size: 16px;
+                padding: 6px 10px;
+            }
+            .content h1 {
+                font-size: 24px;
+            }
+            .heart {
+                font-size: 60px;
+            }
+        }
+        @media (max-width: 480px) {
+            nav ul {
+                flex-direction: column;
+            }
+            .content h1 {
+                font-size: 20px;
+            }
+            .heart {
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="pagina2.html" class="active">Princesa</a></li>
+            <li><a href="pagina3.html">A Melhor Playlist</a></li>
+            <li><a href="pagina4.html">Nossos Planos</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <h1>Princesa</h1>
+        <div id="difficulty-selection">
+            <p>Escolha a "Qualidade" da Princesa:</p>
+            <select id="difficulty" onchange="showImage()">
+                <option>Escolha</option>
+                <option value="144p">144p</option>
+                <option value="240p">240p</option>
+                <option value="360p">360p</option>
+                <option value="480p">480p</option>
+                <option value="720p">720p</option>
+                <option value="1080p">1080p</option>
+            </select>
+            <div id="image-display">
+                <img id="difficulty-image" src="" alt="Qualidade da Princesa">
+            </div>
+        </div>
+        <p class="heart">❤</p>
+    </div>
+
+    <footer>
+        Feito por João Pedro 💕
+    </footer>
+
+    <script>
+        function showImage() {
+            const select = document.getElementById("difficulty");
+            const image = document.getElementById("difficulty-image");
+            const resolution = select.value;
+
+            // Mapeia cada resolução a uma imagem correspondente
+            const imageMap = {
+                "144p": "img1.png", // Substitua pelo caminho da imagem
+                "240p": "img2.png",
+                "360p": "img3.png",
+                "480p": "img4.png",
+                "720p": "img5.png",
+                "1080p": "img9.jpeg"
+            };
+
+            // Define a fonte da imagem e exibe
+            if (imageMap[resolution]) {
+                image.src = imageMap[resolution];
+                image.alt = `Imagem em ${resolution}`;
+                image.style.display = "block";
+            } else {
+                image.style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
